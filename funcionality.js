@@ -11,7 +11,7 @@ buttonsArray.forEach(element => {
         }
         else {
             let stringNumb = secondNmb.toString();
-            if(test){
+            if(resetSecond){
                 stringNumb="0";
             }
             secondNmb = parseInt(stringNumb + element.textContent);
@@ -27,7 +27,7 @@ funcionalButtonsArray.forEach(element => {
         if(operatorChoosen){
             let tempValue = Operate();
             firstNmb = tempValue;
-            test = true;
+            resetSecond = true;
         }
         operator = element.textContent;
         operatorChoosen = true;
@@ -47,12 +47,20 @@ equalButton.addEventListener("click",()=>{
 })
 
 const clearButton = document.querySelector('#clear');
+clearButton.addEventListener("click",()=>{
+    firstNmb = 0;
+    secondNmb = 0;
+    operator = '';
+    operatorChoosen=false;
+    resetSecond = false;
+    UpdatePanel();
+})
 
 let firstNmb=0;
 let secondNmb=0;
 let operator='';
 let operatorChoosen = false;
-let test = false;
+let resetSecond = false;
 function Operate(){
     switch(operator){
         case "+":
