@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#calculator{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+#upperPanel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    margin: 12px;
+}
+#lowerPanel{
+    display: flex;
+    flex-direction: row;
+    margin: 12px;
+}
+#numbers{
+    display: grid;
+    width: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+}
+#funcionalityButtons{
+    display: grid;
+    width: 200px;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+}
+.number{
+    margin: 3px;
+}
+.fB{
+    margin: 3px;
+}
